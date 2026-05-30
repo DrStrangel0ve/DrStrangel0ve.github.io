@@ -657,6 +657,14 @@ h1 {
     rgba(103, 232, 165, 0.08);
 }
 
+.project-icon.transfer {
+  background:
+    linear-gradient(90deg, transparent 0 24%, rgba(89, 220, 224, 0.58) 25% 30%, transparent 31% 47%, rgba(241, 185, 81, 0.62) 48% 53%, transparent 54%),
+    linear-gradient(0deg, transparent 0 24%, rgba(103, 232, 165, 0.52) 25% 30%, transparent 31% 47%, rgba(89, 220, 224, 0.46) 48% 53%, transparent 54%),
+    radial-gradient(circle at 72% 72%, var(--amber) 0 4px, transparent 5px),
+    rgba(89, 220, 224, 0.08);
+}
+
 .cert-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
