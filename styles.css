@@ -632,6 +632,51 @@ h1 {
   gap: 16px;
 }
 
+.cert-card {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 10px;
+}
+
+.cert-card .cert-meta {
+  margin: 0;
+}
+
+.cert-link {
+  width: max-content;
+  max-width: 100%;
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 10px;
+  border: 1px solid rgba(89, 220, 224, 0.34);
+  border-radius: var(--radius);
+  color: var(--cyan);
+  background: rgba(89, 220, 224, 0.07);
+  font-size: 0.88rem;
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.cert-link:hover,
+.cert-link:focus-visible {
+  color: #061012;
+  background: var(--cyan);
+  outline: none;
+}
+
+.cert-link.unlinked {
+  color: var(--soft);
+  border-color: var(--line);
+  background: rgba(18, 24, 29, 0.78);
+}
+
+.cert-link.unlinked:hover,
+.cert-link.unlinked:focus-visible {
+  color: var(--soft);
+  background: rgba(18, 24, 29, 0.78);
+}
+
 .site-footer {
   display: flex;
   align-items: center;
@@ -665,7 +710,7 @@ h1 {
   }
 
   .hero {
-    min-height: 78vh;
+    min-height: clamp(800px, 78vh, 980px);
     padding-top: 76px;
   }
 
@@ -739,6 +784,15 @@ h1 {
 
   .section {
     padding: 62px 14px;
+  }
+
+  .section-heading,
+  .split-panel,
+  .experience-list,
+  .cert-grid,
+  .project-grid {
+    width: min(330px, 100%);
+    max-width: min(330px, 100%);
   }
 
   .signal-grid div {
