@@ -577,6 +577,18 @@ h1 {
   content: " ->";
 }
 
+.project-actions {
+  align-self: end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.project-actions .text-link {
+  margin-top: 0;
+}
+
 .project-icon {
   width: 48px;
   height: 48px;
@@ -624,6 +636,16 @@ h1 {
     radial-gradient(circle at 72% 72%, var(--amber) 0 5px, transparent 6px),
     linear-gradient(0deg, transparent 0 36%, rgba(89, 220, 224, 0.78) 37% 48%, transparent 49%),
     rgba(89, 220, 224, 0.08);
+}
+
+.project-icon.scheduler {
+  background:
+    radial-gradient(circle at 28% 30%, var(--green) 0 4px, transparent 5px),
+    radial-gradient(circle at 72% 30%, var(--cyan) 0 4px, transparent 5px),
+    radial-gradient(circle at 28% 70%, var(--amber) 0 4px, transparent 5px),
+    linear-gradient(90deg, transparent 0 46%, rgba(89, 220, 224, 0.5) 47% 53%, transparent 54%),
+    linear-gradient(0deg, transparent 0 46%, rgba(103, 232, 165, 0.42) 47% 53%, transparent 54%),
+    rgba(103, 232, 165, 0.08);
 }
 
 .cert-grid {
