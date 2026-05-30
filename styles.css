@@ -607,7 +607,8 @@ h1 {
   content: " ->";
 }
 
-.project-actions {
+.project-actions,
+.experience-actions {
   align-self: end;
   display: flex;
   flex-wrap: wrap;
@@ -615,7 +616,8 @@ h1 {
   margin-top: 8px;
 }
 
-.project-actions .text-link {
+.project-actions .text-link,
+.experience-actions .text-link {
   margin-top: 0;
 }
 
