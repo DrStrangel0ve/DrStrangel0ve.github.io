@@ -355,6 +355,11 @@ h1 {
   color: var(--muted);
 }
 
+.education-meta {
+  color: var(--amber);
+  font-weight: 800;
+}
+
 .chip-list,
 .clean-list {
   padding: 0;
@@ -384,6 +389,10 @@ h1 {
   background:
     linear-gradient(135deg, rgba(89, 220, 224, 0.1), rgba(241, 185, 81, 0.06)),
     var(--panel-strong);
+}
+
+.split-panel .callout-panel:last-child {
+  grid-column: 1 / -1;
 }
 
 .experience-list {
