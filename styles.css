@@ -608,6 +608,15 @@ h1 {
     rgba(89, 220, 224, 0.08);
 }
 
+.project-icon.research {
+  background:
+    linear-gradient(90deg, transparent 0 18%, rgba(117, 207, 210, 0.72) 19% 23%, transparent 24% 47%, rgba(223, 180, 95, 0.64) 48% 52%, transparent 53%),
+    linear-gradient(0deg, transparent 0 28%, rgba(131, 211, 165, 0.58) 29% 33%, transparent 34% 67%, rgba(117, 207, 210, 0.45) 68% 72%, transparent 73%),
+    radial-gradient(circle at 26% 72%, var(--cyan) 0 4px, transparent 5px),
+    radial-gradient(circle at 74% 28%, var(--amber) 0 4px, transparent 5px),
+    rgba(117, 207, 210, 0.07);
+}
+
 .project-icon.mesh {
   background:
     linear-gradient(35deg, transparent 0 47%, rgba(103, 232, 165, 0.75) 48% 51%, transparent 52%),
