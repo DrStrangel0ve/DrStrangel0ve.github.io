@@ -1,11 +1,15 @@
 const canvas = document.getElementById("robot-canvas");
-const ctx = canvas.getContext("2d", { alpha: true });
+const ctx = canvas ? canvas.getContext("2d", { alpha: true }) : null;
 let width = 0;
 let height = 0;
 let pixelRatio = 1;
 let animationFrame = 0;
 
 function resizeCanvas() {
+  if (!canvas || !ctx) {
+    return;
+  }
+
   const rect = canvas.getBoundingClientRect();
   pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
   width = Math.max(1, Math.floor(rect.width));
@@ -147,32 +151,64 @@ function render() {
 }
 
 function setupProjectFilters() {
-  const buttons = Array.from(document.querySelectorAll("[data-filter]"));
+  const buttons = Array.from(document.querySelectorAll(".filter-button[data-filter]"));
   const cards = Array.from(document.querySelectorAll(".project-card"));
 
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const filter = button.dataset.filter;
-      buttons.forEach((candidate) => candidate.classList.toggle("active", candidate === button));
+  if (!buttons.length || !cards.length) {
+    return;
+  }
 
-      cards.forEach((card) => {
-        const tags = card.dataset.tags || "";
-        const shouldShow = filter === "all" || tags.includes(filter);
-        card.classList.toggle("hidden", !shouldShow);
-      });
+  function applyFilter(filter) {
+    buttons.forEach((button) => {
+      const isActive = button.dataset.filter === filter;
+      button.classList.toggle("active", isActive);
+      button.setAttribute("aria-pressed", String(isActive));
     });
+
+    cards.forEach((card) => {
+      const tags = (card.dataset.tags || "").split(/\s+/);
+      const shouldShow = filter === "all" || tags.includes(filter);
+      card.classList.toggle("hidden", !shouldShow);
+      card.toggleAttribute("hidden", !shouldShow);
+    });
+  }
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      applyFilter(button.dataset.filter || "all");
+    });
+  });
+
+  const initialFilter = document.querySelector(".filter-button.active")?.dataset.filter || "all";
+  applyFilter(initialFilter);
+}
+
+function startHeroAnimation() {
+  if (!canvas || !ctx) {
+    return;
+  }
+
+  window.addEventListener("resize", resizeCanvas);
+  resizeCanvas();
+  render();
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      cancelAnimationFrame(animationFrame);
+      return;
+    }
+    render();
   });
 }
 
-window.addEventListener("resize", resizeCanvas);
-resizeCanvas();
-setupProjectFilters();
-render();
+function init() {
+  setupProjectFilters();
+  startHeroAnimation();
+}
 
-document.addEventListener("visibilitychange", () => {
-  if (document.hidden) {
-    cancelAnimationFrame(animationFrame);
-    return;
-  }
-  render();
-});
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", init);
+} else {
+  init();
+}
