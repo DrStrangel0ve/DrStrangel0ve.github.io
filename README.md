@@ -1,6 +1,6 @@
-# Arnav Robotics Lab
+# Arnav Malani
 
-GitHub Pages portfolio for robotics, perception, simulation, and 3D reconstruction projects.
+GitHub Pages portfolio for Arnav Malani's robotics, perception, simulation, and 3D reconstruction projects.
 
 Live site:
 
@@ -20,8 +20,8 @@ https://drstrangel0ve.github.io/
 The site is static HTML/CSS/JS:
 
 - `index.html`: page content and project cards
-- `styles.css`: layout, robotics theme, responsive styling
+- `styles.css`: layout, responsive styling, and robotics-inspired visual treatment
 - `script.js`: animated hero canvas and project filters
 - `assets/`: local project visuals copied from public repos
 
-Education, work experience, and certification entries are intentionally written as editable placeholders until real resume details are added.
+Education, work experience, project, and certification entries are written directly in the static HTML.
