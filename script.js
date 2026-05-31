@@ -159,29 +159,35 @@ function setupProjectFilters() {
   }
 
   function applyFilter(filter) {
+    const normalizedFilter = buttons.some((button) => button.dataset.filter === filter) ? filter : "all";
+
     buttons.forEach((button) => {
-      const isActive = button.dataset.filter === filter;
+      const isActive = button.dataset.filter === normalizedFilter;
       button.classList.toggle("active", isActive);
       button.setAttribute("aria-pressed", String(isActive));
     });
 
     cards.forEach((card) => {
       const tags = (card.dataset.tags || "").split(/\s+/);
-      const shouldShow = filter === "all" || tags.includes(filter);
+      const shouldShow = normalizedFilter === "all" || tags.includes(normalizedFilter);
       card.classList.toggle("hidden", !shouldShow);
       card.toggleAttribute("hidden", !shouldShow);
     });
   }
 
+  function filterFromHash() {
+    const hashFilter = window.location.hash.replace("#filter-", "");
+    return buttons.some((button) => button.dataset.filter === hashFilter) ? hashFilter : "all";
+  }
+
   buttons.forEach((button) => {
-    button.addEventListener("click", (event) => {
-      event.preventDefault();
+    button.addEventListener("click", () => {
       applyFilter(button.dataset.filter || "all");
     });
   });
 
-  const initialFilter = document.querySelector(".filter-button.active")?.dataset.filter || "all";
-  applyFilter(initialFilter);
+  window.addEventListener("hashchange", () => applyFilter(filterFromHash()));
+  applyFilter(filterFromHash());
 }
 
 function startHeroAnimation() {

@@ -425,6 +425,7 @@ h1 {
 }
 
 .projects-section {
+  position: relative;
   background: #0d1215;
 }
 
@@ -442,8 +443,22 @@ h1 {
   gap: 8px;
 }
 
+.filter-target {
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .filter-button {
   min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 8px 12px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -453,6 +468,7 @@ h1 {
   font-size: 0.9rem;
   font-weight: 780;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .filter-button.active,
@@ -462,6 +478,28 @@ h1 {
   border-color: var(--green);
   background: var(--green);
   outline: none;
+}
+
+#filter-robotics:target ~ .section-heading .filter-button.active,
+#filter-perception:target ~ .section-heading .filter-button.active,
+#filter-3dgs:target ~ .section-heading .filter-button.active,
+#filter-research:target ~ .section-heading .filter-button.active,
+#filter-web:target ~ .section-heading .filter-button.active,
+#filter-all:target ~ .section-heading .filter-button.active {
+  color: var(--muted);
+  border-color: var(--line);
+  background: rgba(18, 24, 29, 0.78);
+}
+
+#filter-all:target ~ .section-heading .filter-button[href="#filter-all"],
+#filter-robotics:target ~ .section-heading .filter-button[href="#filter-robotics"],
+#filter-perception:target ~ .section-heading .filter-button[href="#filter-perception"],
+#filter-3dgs:target ~ .section-heading .filter-button[href="#filter-3dgs"],
+#filter-research:target ~ .section-heading .filter-button[href="#filter-research"],
+#filter-web:target ~ .section-heading .filter-button[href="#filter-web"] {
+  color: #081012;
+  border-color: var(--green);
+  background: var(--green);
 }
 
 .project-grid {
@@ -476,6 +514,14 @@ h1 {
 }
 
 .project-card.hidden {
+  display: none;
+}
+
+#filter-robotics:target ~ .project-grid .project-card:not([data-tags~="robotics"]),
+#filter-perception:target ~ .project-grid .project-card:not([data-tags~="perception"]),
+#filter-3dgs:target ~ .project-grid .project-card:not([data-tags~="3dgs"]),
+#filter-research:target ~ .project-grid .project-card:not([data-tags~="research"]),
+#filter-web:target ~ .project-grid .project-card:not([data-tags~="web"]) {
   display: none;
 }
 

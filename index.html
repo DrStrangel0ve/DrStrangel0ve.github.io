@@ -182,18 +182,24 @@
       </section>
 
       <section class="section projects-section" id="projects" aria-labelledby="projects-title">
+        <span class="filter-target" id="filter-all"></span>
+        <span class="filter-target" id="filter-robotics"></span>
+        <span class="filter-target" id="filter-perception"></span>
+        <span class="filter-target" id="filter-3dgs"></span>
+        <span class="filter-target" id="filter-research"></span>
+        <span class="filter-target" id="filter-web"></span>
         <div class="section-heading projects-heading">
           <div>
             <p class="eyebrow">Selected builds</p>
             <h2 id="projects-title">Projects</h2>
           </div>
           <div class="filter-bar" aria-label="Project filters">
-            <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All</button>
-            <button class="filter-button" type="button" data-filter="robotics" aria-pressed="false">Robotics</button>
-            <button class="filter-button" type="button" data-filter="perception" aria-pressed="false">Perception</button>
-            <button class="filter-button" type="button" data-filter="3dgs" aria-pressed="false">3DGS</button>
-            <button class="filter-button" type="button" data-filter="research" aria-pressed="false">Research</button>
-            <button class="filter-button" type="button" data-filter="web" aria-pressed="false">Web</button>
+            <a class="filter-button active" href="#filter-all" data-filter="all" aria-pressed="true">All</a>
+            <a class="filter-button" href="#filter-robotics" data-filter="robotics" aria-pressed="false">Robotics</a>
+            <a class="filter-button" href="#filter-perception" data-filter="perception" aria-pressed="false">Perception</a>
+            <a class="filter-button" href="#filter-3dgs" data-filter="3dgs" aria-pressed="false">3DGS</a>
+            <a class="filter-button" href="#filter-research" data-filter="research" aria-pressed="false">Research</a>
+            <a class="filter-button" href="#filter-web" data-filter="web" aria-pressed="false">Web</a>
           </div>
         </div>
 
@@ -392,6 +398,6 @@
       <a href="https://github.com/DrStrangel0ve">github.com/DrStrangel0ve</a>
     </footer>
 
-    <script src="script.js?v=filters-20260531"></script>
+    <script src="script.js?v=filters-20260531b"></script>
   </body>
 </html>
