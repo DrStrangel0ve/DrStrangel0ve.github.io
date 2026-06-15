@@ -483,6 +483,8 @@ h1 {
 #filter-robotics:target ~ .section-heading .filter-button.active,
 #filter-perception:target ~ .section-heading .filter-button.active,
 #filter-3dgs:target ~ .section-heading .filter-button.active,
+#filter-ai:target ~ .section-heading .filter-button.active,
+#filter-systems:target ~ .section-heading .filter-button.active,
 #filter-research:target ~ .section-heading .filter-button.active,
 #filter-web:target ~ .section-heading .filter-button.active,
 #filter-all:target ~ .section-heading .filter-button.active {
@@ -495,6 +497,8 @@ h1 {
 #filter-robotics:target ~ .section-heading .filter-button[href="#filter-robotics"],
 #filter-perception:target ~ .section-heading .filter-button[href="#filter-perception"],
 #filter-3dgs:target ~ .section-heading .filter-button[href="#filter-3dgs"],
+#filter-ai:target ~ .section-heading .filter-button[href="#filter-ai"],
+#filter-systems:target ~ .section-heading .filter-button[href="#filter-systems"],
 #filter-research:target ~ .section-heading .filter-button[href="#filter-research"],
 #filter-web:target ~ .section-heading .filter-button[href="#filter-web"] {
   color: #081012;
@@ -520,6 +524,8 @@ h1 {
 #filter-robotics:target ~ .project-grid .project-card:not([data-tags~="robotics"]),
 #filter-perception:target ~ .project-grid .project-card:not([data-tags~="perception"]),
 #filter-3dgs:target ~ .project-grid .project-card:not([data-tags~="3dgs"]),
+#filter-ai:target ~ .project-grid .project-card:not([data-tags~="ai"]),
+#filter-systems:target ~ .project-grid .project-card:not([data-tags~="systems"]),
 #filter-research:target ~ .project-grid .project-card:not([data-tags~="research"]),
 #filter-web:target ~ .project-grid .project-card:not([data-tags~="web"]) {
   display: none;
@@ -660,6 +666,43 @@ h1 {
     linear-gradient(0deg, transparent 0 28%, rgba(131, 211, 165, 0.58) 29% 33%, transparent 34% 67%, rgba(117, 207, 210, 0.45) 68% 72%, transparent 73%),
     radial-gradient(circle at 26% 72%, var(--cyan) 0 4px, transparent 5px),
     radial-gradient(circle at 74% 28%, var(--amber) 0 4px, transparent 5px),
+    rgba(117, 207, 210, 0.07);
+}
+
+.project-icon.forensics {
+  background:
+    radial-gradient(circle at 30% 30%, var(--rose) 0 4px, transparent 5px),
+    radial-gradient(circle at 68% 32%, var(--cyan) 0 4px, transparent 5px),
+    radial-gradient(circle at 50% 70%, var(--amber) 0 4px, transparent 5px),
+    linear-gradient(45deg, transparent 0 47%, rgba(131, 211, 165, 0.62) 48% 52%, transparent 53%),
+    linear-gradient(135deg, transparent 0 47%, rgba(117, 207, 210, 0.54) 48% 52%, transparent 53%),
+    rgba(216, 123, 147, 0.08);
+}
+
+.project-icon.navstack {
+  background:
+    linear-gradient(90deg, transparent 0 22%, rgba(117, 207, 210, 0.52) 23% 27%, transparent 28% 72%, rgba(117, 207, 210, 0.52) 73% 77%, transparent 78%),
+    linear-gradient(0deg, transparent 0 22%, rgba(131, 211, 165, 0.44) 23% 27%, transparent 28% 72%, rgba(131, 211, 165, 0.44) 73% 77%, transparent 78%),
+    radial-gradient(circle at 26% 72%, var(--amber) 0 4px, transparent 5px),
+    radial-gradient(circle at 72% 28%, var(--cyan) 0 4px, transparent 5px),
+    linear-gradient(135deg, transparent 0 47%, rgba(223, 180, 95, 0.64) 48% 52%, transparent 53%),
+    rgba(117, 207, 210, 0.07);
+}
+
+.project-icon.guardian {
+  background:
+    linear-gradient(90deg, transparent 0 16%, rgba(223, 180, 95, 0.62) 17% 22%, transparent 23% 78%, rgba(223, 180, 95, 0.62) 79% 84%, transparent 85%),
+    linear-gradient(0deg, transparent 0 16%, rgba(117, 207, 210, 0.48) 17% 22%, transparent 23% 78%, rgba(117, 207, 210, 0.48) 79% 84%, transparent 85%),
+    radial-gradient(circle at 50% 50%, var(--green) 0 5px, transparent 6px),
+    rgba(223, 180, 95, 0.08);
+}
+
+.project-icon.docking {
+  background:
+    radial-gradient(circle at 28% 50%, var(--cyan) 0 5px, transparent 6px),
+    radial-gradient(circle at 74% 50%, var(--amber) 0 7px, transparent 8px),
+    linear-gradient(90deg, rgba(117, 207, 210, 0.56) 0 4px, transparent 4px 100%),
+    linear-gradient(0deg, transparent 0 46%, rgba(131, 211, 165, 0.58) 47% 53%, transparent 54%),
     rgba(117, 207, 210, 0.07);
 }
 
