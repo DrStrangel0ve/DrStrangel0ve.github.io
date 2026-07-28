@@ -1,6 +1,7 @@
 # Arnav Malani
 
-GitHub Pages portfolio for Arnav Malani's robotics, perception, simulation, and 3D reconstruction projects.
+GitHub Pages portfolio for Arnav Malani's robotics, perception, simulation,
+3D reconstruction, AI, web, and quantitative research projects.
 
 Live site:
 
