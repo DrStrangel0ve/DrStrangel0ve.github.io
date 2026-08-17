@@ -562,6 +562,10 @@ h1 {
   font-weight: 850;
 }
 
+.realtime-highlight .project-icon {
+  margin-top: 36px;
+}
+
 .project-card.compact {
   display: grid;
   grid-template-rows: auto auto auto 1fr auto;
