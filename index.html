@@ -43,7 +43,8 @@
           <p class="hero-copy">
             Purdue student in Mechanical Engineering and Computer Science building robotics, perception, and 3D reconstruction
             projects. Lately I have been working on Isaac Sim autonomy, MuJoCo reinforcement
-            learning, AV perception, and 3D Gaussian splatting.
+            learning, AV perception, and 3D Gaussian splatting, alongside C++ trading systems
+            and quantitative research.
           </p>
           <div class="hero-actions" role="group" aria-label="Portfolio actions">
             <a class="button primary" href="#projects">View Projects</a>
@@ -396,15 +397,103 @@
             <p class="item-label">Quantitative research</p>
             <h3>Quant Research Portfolio</h3>
             <p>
-              Fifteen reproducible studies spanning derivatives, market microstructure,
-              backtesting, risk, probability, and imperfect-information game solving.
+              Nineteen reproducible projects spanning derivatives, market microstructure,
+              C++ trading systems, historical-data research, risk, and game solving.
             </p>
             <div class="metric-row">
-              <span>15 projects</span>
+              <span>19 projects</span>
               <span>Seeded experiments</span>
               <span>CI tested</span>
             </div>
             <a class="text-link" href="https://github.com/DrStrangel0ve/quant-research-portfolio" target="_blank" rel="noreferrer">View repo</a>
+          </article>
+
+          <article class="project-card featured" data-tags="systems quant research">
+            <a class="media-frame research-chart" href="https://github.com/DrStrangel0ve/quant-research-portfolio/blob/main/projects/18_market_data_pipeline/RESULTS.md" target="_blank" rel="noreferrer" aria-label="Read market-data pipeline benchmark results">
+              <img src="assets/quant-pipeline-benchmark.png" alt="Five Linux benchmark repeats comparing SPSC and mutex queue throughput and burst latency" loading="lazy" width="1870" height="765">
+            </a>
+            <div class="project-body">
+              <p class="item-label">Concurrent C++ systems</p>
+              <h3>Market-Data Pipeline</h3>
+              <p>
+                C++20 UDP feed lab with bounded queues, snapshot recovery, stale-data
+                detection, and risk checks. Linux benchmarks compare throughput and
+                tail latency on synthetic order traffic.
+              </p>
+              <div class="metric-row" role="group" aria-label="Market-data pipeline highlights">
+                <span>SPSC vs. mutex</span>
+                <span>Linux profiling</span>
+                <span>ThreadSanitizer</span>
+              </div>
+              <div class="project-actions">
+                <a class="text-link" href="https://github.com/DrStrangel0ve/quant-research-portfolio/tree/main/projects/18_market_data_pipeline" target="_blank" rel="noreferrer">View project</a>
+                <a class="text-link" href="https://github.com/DrStrangel0ve/quant-research-portfolio/blob/main/projects/18_market_data_pipeline/RESULTS.md" target="_blank" rel="noreferrer">Benchmarks</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card featured" data-tags="quant research">
+            <a class="media-frame research-chart" href="https://github.com/DrStrangel0ve/quant-research-portfolio/blob/main/projects/19_real_data_volatility/RESULTS.md" target="_blank" rel="noreferrer" aria-label="Read BTC and ETH volatility forecasting results">
+              <img src="assets/quant-heldout-volatility.png" alt="BTC and ETH daily volatility forecasts compared with observed values from January through June 2026" loading="lazy" width="1760" height="1120">
+            </a>
+            <div class="project-body">
+              <p class="item-label">Empirical quantitative research</p>
+              <h3>Real-Data Volatility Study</h3>
+              <p>
+                BTC and ETH forecasts from 62 checksum-verified archives. Model selection
+                uses 2025 data; a separate 2026 evaluation reports baseline comparisons
+                and uncertainty, including an inconclusive BTC result.
+              </p>
+              <div class="metric-row" role="group" aria-label="Volatility study highlights">
+                <span>45,264 hourly bars</span>
+                <span>181 test days / asset</span>
+                <span>Block bootstrap</span>
+              </div>
+              <div class="project-actions">
+                <a class="text-link" href="https://github.com/DrStrangel0ve/quant-research-portfolio/tree/main/projects/19_real_data_volatility" target="_blank" rel="noreferrer">View project</a>
+                <a class="text-link" href="https://github.com/DrStrangel0ve/quant-research-portfolio/blob/main/projects/19_real_data_volatility/RESULTS.md" target="_blank" rel="noreferrer">Study results</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card compact" data-tags="systems quant">
+            <div class="project-icon quant" aria-hidden="true"></div>
+            <p class="item-label">Trading infrastructure</p>
+            <h3>C++ Order Book &amp; Replay</h3>
+            <p>
+              Integer-tick, price-time matching with partial fills, indexed cancellation,
+              and deterministic replay. An independent reference engine checks correctness;
+              benchmarks expose how performance changes with book depth.
+            </p>
+            <div class="metric-row" role="group" aria-label="Order book highlights">
+              <span>C++20</span>
+              <span>40,000 randomized events</span>
+              <span>FIFO matching</span>
+            </div>
+            <div class="project-actions">
+              <a class="text-link" href="https://github.com/DrStrangel0ve/quant-research-portfolio/tree/main/projects/16_cpp_order_book_replay" target="_blank" rel="noreferrer">View project</a>
+              <a class="text-link" href="https://github.com/DrStrangel0ve/quant-research-portfolio/blob/main/projects/16_cpp_order_book_replay/RESULTS.md" target="_blank" rel="noreferrer">Benchmarks</a>
+            </div>
+          </article>
+
+          <article class="project-card compact" data-tags="quant research">
+            <div class="project-icon quant" aria-hidden="true"></div>
+            <p class="item-label">Market microstructure</p>
+            <h3>Execution Stress Lab</h3>
+            <p>
+              Synthetic market-making experiments with queue position, delayed orders,
+              adverse selection, and inventory limits. Paired comparisons show when
+              lower inventory risk fails to improve P&amp;L.
+            </p>
+            <div class="metric-row" role="group" aria-label="Execution stress highlights">
+              <span>48 paired seeds</span>
+              <span>6 scenarios</span>
+              <span>Confidence intervals</span>
+            </div>
+            <div class="project-actions">
+              <a class="text-link" href="https://github.com/DrStrangel0ve/quant-research-portfolio/tree/main/projects/17_execution_stress_lab" target="_blank" rel="noreferrer">View project</a>
+              <a class="text-link" href="https://github.com/DrStrangel0ve/quant-research-portfolio/blob/main/projects/17_execution_stress_lab/RESULTS.md" target="_blank" rel="noreferrer">Experiment results</a>
+            </div>
           </article>
 
           <article class="project-card compact" data-tags="ai research">
@@ -566,6 +655,22 @@
             <p>Bot for querying Purdue transfer credit equivalencies, iterating school/state options, and exporting CSV or JSON reports.</p>
             <a class="text-link" href="https://github.com/DrStrangel0ve/Transfer_Lookup">View repo</a>
           </article>
+
+          <article class="project-card compact" data-tags="robotics systems">
+            <div class="project-icon fabrication" aria-hidden="true"></div>
+            <p class="item-label">Mechanical fabrication</p>
+            <h3>Macau Print STL Library</h3>
+            <p>
+              Printable mechanical parts for the Macau Print project, including a card holder,
+              HX holder, and reusable pivot fasteners.
+            </p>
+            <div class="metric-row">
+              <span>7 STL models</span>
+              <span>Pivot hardware</span>
+              <span>CAD export</span>
+            </div>
+            <a class="text-link" href="https://github.com/DrStrangel0ve/Macau-Print" target="_blank" rel="noreferrer">View repo</a>
+          </article>
         </div>
       </section>
 
@@ -611,18 +716,3 @@
     <script src="script.js?v=filters-20260531b"></script>
   </body>
 </html>
-          <article class="project-card compact" data-tags="robotics systems">
-            <div class="project-icon fabrication" aria-hidden="true"></div>
-            <p class="item-label">Mechanical fabrication</p>
-            <h3>Macau Print STL Library</h3>
-            <p>
-              Printable mechanical parts for the Macau Print project, including a card holder,
-              HX holder, and reusable pivot fasteners.
-            </p>
-            <div class="metric-row">
-              <span>7 STL models</span>
-              <span>Pivot hardware</span>
-              <span>CAD export</span>
-            </div>
-            <a class="text-link" href="https://github.com/DrStrangel0ve/Macau-Print" target="_blank" rel="noreferrer">View repo</a>
-          </article>

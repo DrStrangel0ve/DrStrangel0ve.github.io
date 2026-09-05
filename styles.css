@@ -486,6 +486,7 @@ h1 {
 #filter-ai:target ~ .section-heading .filter-button.active,
 #filter-systems:target ~ .section-heading .filter-button.active,
 #filter-research:target ~ .section-heading .filter-button.active,
+#filter-quant:target ~ .section-heading .filter-button.active,
 #filter-web:target ~ .section-heading .filter-button.active,
 #filter-all:target ~ .section-heading .filter-button.active {
   color: var(--muted);
@@ -586,6 +587,15 @@ h1 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.media-frame.research-chart {
+  background: #fff;
+  padding: 10px;
+}
+
+.media-frame.research-chart img {
+  object-fit: contain;
 }
 
 .print-pipeline {
